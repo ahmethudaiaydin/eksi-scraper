@@ -1,6 +1,6 @@
-# First Puppeteer Scraper (example)
+# EksiSozluk Scrapper
 
-This project was realized as part of the "Web Scraping in JavaScript – How to Use Puppeteer to Scrape Web Pages" article. Feel free to read it to learn more about this library and how this code works.
+This project is for scrapping data from EksiSozluk with all topics.
 
 ### Build
 
@@ -16,4 +16,4 @@ $ npm start
 
 ## Author
 
-- **Gaël THOMAS** - [gaelgthomas](https://github.com/gaelgthomas)
+- **Ahmet Hudai Aydin** - [ahmethudaiaydin](https://github.com/ahmethudaiaydin)
