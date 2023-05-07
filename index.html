@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>EksiSozluk Data Miner</title>
+</head>
+
+<body>
+
+<p>
+   Sistemin çalışması için  <a href="https://cors-anywhere.herokuapp.com/">https://cors-anywhere.herokuapp.com/</a>  
+   linkine tıklayın ve "Request temporary access to the demo server" butonuna tıklayın geçici olarak
+    ücretsiz CORS Anywhere proxysisi kullanıma açılacak.
+</p>
+    <form>
+        <label for="keyword">İndirmek istediğiniz EksiSozluk araması:</label>
+        <input type="text" id="keyword" name="keyword" value="muhammed-yakut-sedat-peker-iliskisi">
+        <button type="button" id="submit-btn">Veriyi hazırla</button>
+    </form>
+
+    <label>Topic Tablosu</label>
+
+    <table id="topic-table" class="display">
+        <thead>
+            <tr>
+                <th>Topic</th>
+                <th>Link</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <div id="console-log"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="index.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+    <script type="text/javascript" src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/plug-ins/1.13.4/api/processing().js"></script>
+    
+    <style>
+        #console-log {
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  padding: 10px;
+  font-family: monospace;
+  font-size: 12px;
+  overflow-y: scroll;
+  max-height: 200px;
+}
+    </style>
+
+    <script>
+        function handleSubmit() {
+            finalTopicList = [];
+            const text = document.getElementById('keyword').value;
+            scrap(text);
+        }
+
+        // Bind the function to the click event of the button
+        const submitBtn = document.getElementById('submit-btn');
+        submitBtn.addEventListener('click', handleSubmit);
+    </script>
+    
+</body>
+
+</html>
